@@ -442,3 +442,1369 @@ You could later add:
 * Roofing certifications badges
 * Smooth scrolling animations
 * Dark overlay video hero section
+
+
+could you help me made it responsive for mobile devices if is not alredy, please, if posible add the dark overlay video hero section and the smooth scrolling animations, a page with reviews and Q&A, pleaaassssse
+
+
+
+
+
+### `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elite Roofing & Construction</title>
+
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <!-- ========================= -->
+  <!-- HEADER / HERO -->
+  <!-- ========================= -->
+  <header class="hero">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source
+        src="https://cdn.coverr.co/videos/coverr-roofing-workers-1560675908216?download=1080p"
+        type="video/mp4"
+      />
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+      <div class="logo">EliteRoof</div>
+
+      <!-- Mobile Button -->
+      <div class="menu-toggle" id="menuToggle">
+        ☰
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">Q&A</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="btn-primary desktop-btn">
+        Free Estimate
+      </a>
+
+    </nav>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content fade-up">
+
+      <h1>
+        Reliable Roofing Built To Protect What Matters Most
+      </h1>
+
+      <p>
+        Residential & commercial roofing solutions with trusted craftsmanship,
+        fast response times, and premium materials.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">
+          Free Inspection
+        </a>
+
+        <a href="#services" class="btn-secondary">
+          Our Services
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- ========================= -->
+  <!-- STATS -->
+  <!-- ========================= -->
+  <section class="stats section">
+
+    <div class="stat-card fade-up">
+      <h2>10+</h2>
+      <p>Years Experience</p>
+    </div>
+
+    <div class="stat-card fade-up">
+      <h2>1500+</h2>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-card fade-up">
+      <h2>24/7</h2>
+      <p>Emergency Support</p>
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- SERVICES -->
+  <!-- ========================= -->
+  <section id="services" class="services section">
+
+    <div class="section-title fade-up">
+      <h2>Our Services</h2>
+      <p>High-quality roofing & construction solutions.</p>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card fade-up">
+        <h3>Roof Replacement</h3>
+        <p>
+          Durable roofing systems designed for long-term performance.
+        </p>
+      </div>
+
+      <div class="service-card fade-up">
+        <h3>Roof Repair</h3>
+        <p>
+          Leak repairs, storm restoration, and emergency roofing support.
+        </p>
+      </div>
+
+      <div class="service-card fade-up">
+        <h3>Storm Damage</h3>
+        <p>
+          Fast restoration services with insurance claim assistance.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- ABOUT -->
+  <!-- ========================= -->
+  <section id="about" class="about section">
+
+    <div class="about-text fade-left">
+
+      <h2>Why Homeowners Choose Us</h2>
+
+      <p>
+        Our experienced team delivers dependable roofing services backed by
+        honest communication, certified installers, and industry-leading
+        materials.
+      </p>
+
+      <ul>
+        <li>Licensed & Insured</li>
+        <li>Certified Roofing Specialists</li>
+        <li>Free Roof Inspections</li>
+        <li>Financing Options Available</li>
+      </ul>
+
+    </div>
+
+    <div class="about-image fade-right">
+
+      <img
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400&auto=format&fit=crop"
+        alt="Roofing workers"
+      />
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- REVIEWS -->
+  <!-- ========================= -->
+  <section id="reviews" class="reviews section">
+
+    <div class="section-title fade-up">
+      <h2>Customer Reviews</h2>
+      <p>See what our customers say about us.</p>
+    </div>
+
+    <div class="reviews-grid">
+
+      <div class="review-card fade-up">
+        <h3>★★★★★</h3>
+        <p>
+          “Professional team, fast installation, and excellent communication.”
+        </p>
+        <span>- Sarah M.</span>
+      </div>
+
+      <div class="review-card fade-up">
+        <h3>★★★★★</h3>
+        <p>
+          “Our roof looks amazing. They handled everything with insurance.”
+        </p>
+        <span>- James T.</span>
+      </div>
+
+      <div class="review-card fade-up">
+        <h3>★★★★★</h3>
+        <p>
+          “Highly recommend for anyone needing roof repairs after storms.”
+        </p>
+        <span>- David R.</span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- FAQ -->
+  <!-- ========================= -->
+  <section id="faq" class="faq section">
+
+    <div class="section-title fade-up">
+      <h2>Questions & Answers</h2>
+      <p>Common questions from homeowners.</p>
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-item fade-up">
+        <button class="faq-question">
+          How long does a roof replacement take?
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Most residential roof replacements are completed within 1–2 days.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-question">
+          Do you help with insurance claims?
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Yes, we assist homeowners throughout the insurance process.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-question">
+          Do you offer free inspections?
+        </button>
+
+        <div class="faq-answer">
+          <p>
+            Absolutely. We provide free roof inspections and estimates.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- CONTACT -->
+  <!-- ========================= -->
+  <section id="contact" class="contact section">
+
+    <div class="section-title fade-up">
+      <h2>Request Your Free Estimate</h2>
+      <p>We'll contact you within 24 hours.</p>
+    </div>
+
+    <form id="contactForm" class="fade-up">
+
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Phone Number" required />
+
+      <textarea
+        placeholder="Tell us about your project"
+      ></textarea>
+
+      <button type="submit" class="btn-primary">
+        Submit Request
+      </button>
+
+    </form>
+
+    <p id="formMessage"></p>
+
+  </section>
+
+  <!-- ========================= -->
+  <!-- FOOTER -->
+  <!-- ========================= -->
+  <footer>
+
+    <p>
+      © 2026 Elite Roofing & Construction. All rights reserved.
+    </p>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+
+---
+
+# `styles.css`
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f6f6f6;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: .3s;
+}
+
+.nav-links a:hover {
+  color: #ffb703;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 700px;
+  padding: 140px 8%;
+}
+
+.hero-content h1 {
+  font-size: 65px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #ffb703;
+  color: #111;
+}
+
+.btn-primary:hover {
+  background: #ffa200;
+}
+
+.btn-secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: black;
+}
+
+/* ========================= */
+/* SECTIONS */
+/* ========================= */
+
+.section {
+  padding: 90px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.stat-card {
+  background: #f2f2f2;
+  padding: 35px;
+  border-radius: 14px;
+  width: 250px;
+  text-align: center;
+}
+
+.stat-card h2 {
+  color: #ff9800;
+  font-size: 42px;
+}
+
+/* ========================= */
+/* SERVICES */
+/* ========================= */
+
+.service-grid,
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
+}
+
+.service-card,
+.review-card {
+  background: white;
+  padding: 35px;
+  border-radius: 14px;
+  transition: .3s;
+}
+
+.service-card:hover,
+.review-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+}
+
+/* ========================= */
+/* ABOUT */
+/* ========================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: white;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.about ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+/* ========================= */
+/* FAQ */
+/* ========================= */
+
+.faq-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px;
+  border: none;
+  background: white;
+  text-align: left;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: .4s ease;
+  padding: 0 22px;
+}
+
+.faq-answer p {
+  padding-bottom: 20px;
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact form {
+  max-width: 700px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact textarea {
+  min-height: 150px;
+}
+
+#formMessage {
+  text-align: center;
+  margin-top: 20px;
+  color: green;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+.fade-up,
+.fade-left,
+.fade-right {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.fade-up {
+  transform: translateY(40px);
+}
+
+.fade-left {
+  transform: translateX(-40px);
+}
+
+.fade-right {
+  transform: translateX(40px);
+}
+
+.show {
+  opacity: 1;
+  transform: translate(0);
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 20;
+  }
+
+  .desktop-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 90px;
+    right: -100%;
+    background: rgba(0,0,0,.95);
+    width: 250px;
+    flex-direction: column;
+    padding: 30px;
+    transition: .4s;
+    border-radius: 12px;
+  }
+
+  .nav-links.active {
+    right: 8%;
+  }
+
+  .section-title h2 {
+    font-size: 34px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero-content {
+    padding-top: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .section {
+    padding: 70px 6%;
+  }
+
+  .stat-card {
+    width: 100%;
+  }
+}
+```
+
+---
+
+# `script.js`
+
+```javascript
+// =========================
+// MOBILE MENU
+// =========================
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// =========================
+// FAQ ACCORDION
+// =========================
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(question => {
+
+  question.addEventListener("click", () => {
+
+    const answer = question.nextElementSibling;
+
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
+    } else {
+      answer.style.maxHeight =
+        answer.scrollHeight + "px";
+    }
+
+  });
+
+});
+
+// =========================
+// CONTACT FORM
+// =========================
+
+const form = document.getElementById("contactForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  message.textContent =
+    "Thank you! Your request has been submitted.";
+
+  form.reset();
+
+});
+
+// =========================
+// SCROLL ANIMATIONS
+// =========================
+
+const elements = document.querySelectorAll(
+  ".fade-up, .fade-left, .fade-right"
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+
+  });
+
+}, {
+  threshold: 0.2
+});
+
+elements.forEach(el => observer.observe(el));
+```
+
+
+the video is not loading even when i have change the source, could you please give me an index that includes somekind of test over the video and if is not working could you load a pretty image instead?
+
+```html
+<!-- HERO SECTION -->
+<header class="hero">
+
+  <!-- FALLBACK IMAGE -->
+  <div class="hero-fallback"></div>
+
+  <!-- VIDEO -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="hero-video"
+    id="heroVideo"
+  >
+    <source
+      src="videos/roofing-video.mp4"
+      type="video/mp4"
+    />
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <div class="logo">EliteRoof</div>
+
+    <div class="menu-toggle" id="menuToggle">
+      ☰
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">Q&A</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO CONTENT -->
+  <div class="hero-content fade-up">
+
+    <h1>
+      Reliable Roofing Built To Protect What Matters Most
+    </h1>
+
+    <p>
+      Premium roofing & construction services for homes and businesses.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#contact" class="btn-primary">
+        Free Estimate
+      </a>
+
+      <a href="#services" class="btn-secondary">
+        Our Services
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+```
+
+---
+
+# Add this to your `styles.css`
+
+```css
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+/* VIDEO */
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* FALLBACK IMAGE */
+
+.hero-fallback {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+
+  z-index: 0;
+}
+
+/* DARK OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.60);
+  z-index: 2;
+}
+
+/* CONTENT ABOVE VIDEO */
+
+.navbar,
+.hero-content {
+  position: relative;
+  z-index: 5;
+}
+```
+
+---
+
+# Replace your `script.js` with this improved version
+
+```javascript
+// =========================
+// VIDEO FALLBACK SYSTEM
+// =========================
+
+const video = document.getElementById("heroVideo");
+
+if (video) {
+
+  // If video loads successfully
+  video.addEventListener("canplay", () => {
+
+    console.log("Video loaded successfully");
+
+    video.style.display = "block";
+
+  });
+
+  // If video fails
+  video.addEventListener("error", () => {
+
+    console.log("Video failed to load");
+
+    video.style.display = "none";
+
+  });
+
+  // Extra timeout protection
+  setTimeout(() => {
+
+    if (
+      video.readyState === 0 ||
+      video.networkState === 3
+    ) {
+
+      console.log("Fallback image activated");
+
+      video.style.display = "none";
+    }
+
+  }, 4000);
+
+}
+
+// =========================
+// MOBILE MENU
+// =========================
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+if (menuToggle) {
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+}
+
+// =========================
+// FAQ ACCORDION
+// =========================
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(question => {
+
+  question.addEventListener("click", () => {
+
+    const answer = question.nextElementSibling;
+
+    if (answer.style.maxHeight) {
+
+      answer.style.maxHeight = null;
+
+    } else {
+
+      answer.style.maxHeight =
+        answer.scrollHeight + "px";
+
+    }
+
+  });
+
+});
+
+// =========================
+// CONTACT FORM
+// =========================
+
+const form = document.getElementById("contactForm");
+const message = document.getElementById("formMessage");
+
+if (form) {
+
+  form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    message.textContent =
+      "Thank you! Your request has been submitted.";
+
+    form.reset();
+
+  });
+
+}
+
+// =========================
+// SCROLL ANIMATIONS
+// =========================
+
+const animatedElements = document.querySelectorAll(
+  ".fade-up, .fade-left, .fade-right"
+);
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+
+  });
+
+}, {
+  threshold: 0.15
+});
+
+animatedElements.forEach(el => observer.observe(el));
+```
+
+---
+
+# Recommended Project Structure
+
+```bash
+project-folder/
+│
+├── index.html
+├── styles.css
+├── script.js
+│
+├── videos/
+│   └── roofing-video.mp4
+│
+└── images/
+    └── hero-fallback.jpg
+```
+
+---
+
+# IMPORTANT VIDEO TIPS
+
+Most hero video issues happen because of:
+
+### 1. Wrong file path
+
+Example:
+
+```html
+src="videos/roofing-video.mp4"
+```
+
+Means:
+
+```bash
+project-folder/videos/roofing-video.mp4
+```
+
+---
+
+### 2. Browser autoplay restrictions
+
+Your video MUST have:
+
+```html
+autoplay muted playsinline
+```
+
+Muted is required for autoplay.
+
+---
+
+### 3. Unsupported video codec
+
+Use:
+
+* `.mp4`
+* H264 codec
+
+Best conversion tool:
+
+* HandBrake
+
+---
+
+### 4. Video too large
+
+Try:
+
+* under 10MB
+* 720p instead of 4K
+
+---
+
+# Bonus Improvement (Optional)
+
+You can preload the poster image too:
+
+```html
+<video
+  poster="images/hero-fallback.jpg"
+>
+```
+
+This makes the hero feel instant while the video loads.
+
+
+  how to implement the bonus improvement, you mean inside the video tag i alredy have? and please tell me is this video match the aesthetic: https://www.pexels.com/download/video/4198816/
+
+
+Yes — exactly. Add the `poster` attribute directly inside your existing `<video>` tag.
+
+Example:
+
+```html
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  poster="images/hero-fallback.jpg"
+  class="hero-video"
+  id="heroVideo"
+>
+  <source
+    src="videos/roofing-video.mp4"
+    type="video/mp4"
+  />
+</video>
+```
+
+What this does:
+
+* The poster image appears instantly while the video loads.
+* If the video fails, users still see a professional hero image.
+* Makes the website feel much smoother on mobile and slow internet.
+
+---
+
+About the Pexels video you shared:
+
+`https://www.pexels.com/download/video/4198816/`
+
+Yes — aesthetically it matches VERY well for:
+
+* premium roofing companies
+* construction brands
+* modern contractor websites
+* dark cinematic hero sections
+
+It has:
+
+* professional movement
+* clean cinematic framing
+* commercial-brand vibe
+* strong contrast with dark overlay
+* trustworthy contractor aesthetic
+
+That style is very close to:
+
+* Idea Roofing
+* Erie Home
+* modern GAF-certified contractor sites
+
+So visually: **good choice**.
+
+---
+
+But there is one VERY important thing:
+
+That direct Pexels `/download/video/...` URL is not ideal for production websites because:
+
+* it can expire
+* browsers sometimes block it
+* autoplay reliability is inconsistent
+* CDN headers may fail
+
+Instead:
+
+1. Download the video manually from Pexels
+2. Rename it:
+
+```bash
+roofing-video.mp4
+```
+
+3. Put it inside:
+
+```bash
+videos/roofing-video.mp4
+```
+
+Then use:
+
+```html
+src="videos/roofing-video.mp4"
+```
+
+This is MUCH more reliable.
+
+---
+
+I also strongly recommend compressing it first.
+
+Best settings:
+
+* MP4
+* H264 codec
+* 720p
+* under 8MB ideally
+
+Use:
+
+* [HandBrake](https://handbrake.fr?utm_source=chatgpt.com)
+
+---
+
+This is the BEST setup overall:
+
+```html
+<video
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  poster="images/hero-fallback.jpg"
+  class="hero-video"
+  id="heroVideo"
+>
+  <source
+    src="videos/roofing-video.mp4"
+    type="video/mp4"
+  />
+</video>
+```
+
+And add this CSS too:
+
+```css
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  filter:
+    brightness(.75)
+    contrast(1.05)
+    saturate(1.1);
+}
+```
+
+That filter gives:
+
+* richer blacks
+* more cinematic contrast
+* premium construction-company look
+
+---
+
+One more improvement that would massively elevate the site:
+
+Add a slight zoom animation to the hero.
+
+```css
+.hero-video {
+  animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom {
+
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+
+}
+```
+
+That creates the modern luxury-brand feeling used by:
+
+* roofing companies
+* luxury builders
+* architecture firms
+* real estate developers
+
+The result feels MUCH more expensive. ([pexels.com][1])
+
+[1]: https://www.pexels.com/search/videos/roofing/?utm_source=chatgpt.com "Roofing Videos, Download The BEST Free 4k Stock Video Footage & Roofing HD Video Clips"
