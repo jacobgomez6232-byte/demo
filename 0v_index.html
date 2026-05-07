@@ -1808,3 +1808,183 @@ That creates the modern luxury-brand feeling used by:
 The result feels MUCH more expensive. ([pexels.com][1])
 
 [1]: https://www.pexels.com/search/videos/roofing/?utm_source=chatgpt.com "Roofing Videos, Download The BEST Free 4k Stock Video Footage & Roofing HD Video Clips"
+
+
+  please help me with a last thing, the menu in mobile devices doesnt worked cause it apears behind the text like "Reliable Roofing ..."
+
+
+  Your mobile menu is being hidden behind the hero content because of the `z-index` stacking order.
+
+The fix is simple:
+
+---
+
+# Replace your mobile `.nav-links` CSS with this
+
+```css id="3r2gde"
+.nav-links {
+  position: fixed;
+
+  top: 0;
+  right: -100%;
+
+  width: 280px;
+  height: 100vh;
+
+  background: rgba(10,10,10,.96);
+
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 120px;
+  padding-left: 35px;
+
+  gap: 30px;
+
+  transition: .4s ease;
+
+  z-index: 9999;
+}
+```
+
+---
+
+# Then add this too
+
+```css id="rz54g3"
+.nav-links.active {
+  right: 0;
+}
+```
+
+---
+
+# Now update your `.menu-toggle`
+
+```css id="pkdhdy"
+.menu-toggle {
+  display: none;
+
+  font-size: 34px;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 10000;
+
+  color: white;
+}
+```
+
+---
+
+# Then inside your mobile media query (`@media max-width: 900px`)
+
+replace your current mobile navbar styles with this:
+
+```css id="8r6vh8"
+@media (max-width: 900px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .desktop-btn {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+}
+```
+
+---
+
+# Optional Professional Improvement (Highly Recommended)
+
+Add a close button (`✕`) inside the mobile menu.
+
+---
+
+## Replace this:
+
+```html id="e1f7wo"
+<ul class="nav-links" id="navLinks">
+```
+
+With this:
+
+```html id="3qkgmk"
+<ul class="nav-links" id="navLinks">
+
+  <div class="close-menu" id="closeMenu">
+    ✕
+  </div>
+```
+
+---
+
+# Add this CSS
+
+```css id="3ep4mi"
+.close-menu {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  font-size: 32px;
+  cursor: pointer;
+
+  color: white;
+}
+```
+
+---
+
+# Add this JS
+
+```javascript id="84o57u"
+const closeMenu = document.getElementById("closeMenu");
+
+closeMenu.addEventListener("click", () => {
+  navLinks.classList.remove("active");
+});
+```
+
+---
+
+# Bonus UX Improvement
+
+Close the menu automatically when clicking a link.
+
+Add this too:
+
+```javascript id="o8k0fj"
+document.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+
+});
+```
+
+---
+
+This gives you:
+
+* proper fullscreen mobile menu
+* clean overlay effect
+* no text overlap
+* modern roofing-company UX
+* much better mobile experience
+
+Very similar to premium contractor websites now.
+
+  
